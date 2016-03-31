@@ -918,7 +918,10 @@ class Model(with_metaclass(MetaModel)):
             }
             cls._index_classes = {}
             for item in dir(cls):
-                item_cls = getattr(getattr(cls, item), "__class__", None)
+                try:
+                    item_cls = getattr(getattr(cls, item), "__class__", None)
+                except AttributeError:
+                    continue
                 if item_cls is None:
                     continue
                 if issubclass(item_cls, (Index, )):
