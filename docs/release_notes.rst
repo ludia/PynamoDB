@@ -1,6 +1,31 @@
 Release Notes
 =============
 
+v1.4.2.1
+--------
+
+:date: 2016-03-31
+
+Ludia stable release. Contain bugfixes from 1.4.3.
+
+Does NOT contain all changes about performance optimization with botocore
+
+Changes in this release:
+
+* Fixed bug where models without a range key weren't handled correctly
+* Removed the dependency on OrderedDict
+* Fixed bug for zope interface compatibility (#71)
+* Fixed bug where the range key was handled incorrectly for integer values
+
+Ludia:
+
+* Fixed a second bug for zope interface compatibility
+
+From devel:
+
+* Fix bug with parsing date with dateutil
+
+
 v1.4.2
 ------
 
